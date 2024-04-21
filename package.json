@@ -1,0 +1,14 @@
+{
+  "name": "javascript-assesments",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/narekboshyan/Javascript-assesments.git",
+  "author": "Narek Boshyan <narek.boshyan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "start": "nodemon script.js"
+  }
+}
