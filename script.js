@@ -114,48 +114,58 @@ For example, start with 87:
 // const inputString = "ab ba ba ba ab da ak ka po ab";
 // console.log(findMostRepeatedWords(inputString)); // Output: "ab_3"
 
-function insertArrayAtMiddle(original, toInsert) {
-  const middleIndex = Math.floor(original.length / 2);
-  const originalLength = original.length;
-  const insertLength = toInsert.length;
+// function insertArrayAtMiddle(original, toInsert) {
+//   const middleIndex = Math.floor(original.length / 2);
+//   const originalLength = original.length;
+//   const insertLength = toInsert.length;
 
-  for (let i = originalLength - 1; i >= middleIndex; i--) {
-    original[i + insertLength] = original[i];
-  }
+//   for (let i = originalLength - 1; i >= middleIndex; i--) {
+//     original[i + insertLength] = original[i];
+//   }
 
-  for (let i = 0; i < insertLength; i++) {
-    original[middleIndex + i] = toInsert[i];
-  }
+//   for (let i = 0; i < insertLength; i++) {
+//     original[middleIndex + i] = toInsert[i];
+//   }
 
-  return original;
-}
+//   return original;
+// }
 
-const arr = [1, 2, 3, 7, 8, 9];
-const insertingElements = [4, 5, 6];
-console.log(insertArrayAtMiddle(arr, insertingElements));
+// const arr = [1, 2, 3, 7, 8, 9];
+// const insertingElements = [4, 5, 6];
+// console.log(insertArrayAtMiddle(arr, insertingElements));
 
-function insertArrayInMiddle(original, toInsert) {
-  const middleIndex = Math.floor(original.length / 2);
-  const insertLength = toInsert.length;
+// function insertArrayInMiddle(original, toInsert) {
+//   const middleIndex = Math.floor(original.length / 2);
+//   const insertLength = toInsert.length;
 
-  // Extend the original array to accommodate new elements
-  original.length += insertLength;
+//   // Extend the original array to accommodate new elements
+//   original.length += insertLength;
 
-  // Start from the end of the original array and work backwards
-  for (let i = original.length - 1; i >= middleIndex; i--) {
-    if (i < middleIndex + insertLength) {
-      // Insert the elements of 'toInsert' array
-      original[i] = toInsert[i - middleIndex];
-    } else {
-      // Shift the original elements to make space for new elements
-      original[i] = original[i - insertLength];
-    }
-  }
+//   // Start from the end of the original array and work backwards
+//   for (let i = original.length - 1; i >= middleIndex; i--) {
+//     if (i < middleIndex + insertLength) {
+//       // Insert the elements of 'toInsert' array
+//       original[i] = toInsert[i - middleIndex];
+//     } else {
+//       // Shift the original elements to make space for new elements
+//       original[i] = original[i - insertLength];
+//     }
+//   }
 
-  return original;
-}
+//   return original;
+// }
 
 // Example usage:
 // const arr = [1, 2, 6, 7, 8, 9, 10];
 // const insertingElements = [3, 4, 5];
 // console.log(insertArrayInMiddle(arr, insertingElements));
+
+// Closure
+// const counter = (() => {
+//   let num = 0;
+//   return () => ++num;
+// })();
+
+// console.log(counter()); //1
+// console.log(counter()); //2
+// console.log(counter()); //3
